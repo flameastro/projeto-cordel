@@ -4,10 +4,32 @@
     --header-background-color: #030303;
     --header-color: #fafaff;
     --header-hyperlink-color: #f3f7ff;
+    --header-hyperlink-hover-color: #a2bfff;
+    --header-shadow-color: rgba(0, 0, 0, 0.677);
+
+    /* Main */
+    --main-background-color: #f7fbff;
+
+    /* Section with Image Styles */
+    --background-image-text-color: #f4f2ff;
+    --background-image-background-color: #00000083;
+
+    /* Footer Styles */
+    --footer-background-color: #09101a;
+    --footer-text-color: #f0f8ff;
+    --footer-hyperlink-text-color: #84c8ff;
+    --footer-hyperlink-visited-text-color: #7a14ff;
+    --footer-hyperlink-hover-text-color: #4fb0ff;
+    --footer-shadow-color: #09101a91;
+
+    /* Selection Settings */
+    --selection-background-color: rgba(0, 0, 0, 0.881);
+    --selection-text-color: white;
 
     /* Fonts */
     --passion-one-font: "Passion One", cursive;
     --sriracha-font: "Sriracha", cursive;
+    --verdana-font: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* General Styles */
@@ -17,12 +39,37 @@
     margin: 0;
 }
 
+::selection {
+    background-color: var(--selection-background-color);
+    color: var(--selection-text-color);
+}
 
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #d1d1d1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6b6b6b;
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #515151;
+}
+
+/* HTML Content */
 header {
     background-color: var(--header-background-color);
     color: var(--header-color);
+    box-shadow: 1px 1px 10px var(--header-shadow-color);
     width: 100%;
     padding: 25px;
+    margin-bottom: 20px;
 
     /* Flex settings */
     display: flex;
@@ -32,31 +79,84 @@ header {
 }
 
 header h1#header-title {
-    font: 700 6em var(--passion-one-font);
+    font: 700 6vw var(--passion-one-font);
 }
 
 header h1#header-title span.big-text {
-    font-size: 1.4em;
+    font-size: 7.8vw;
 }
 
 header div.box p {
     font-weight: bold;
+    font-size: 1.8vw;
 }
 
 header div.box p a {
     color: var(--header-hyperlink-color);
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 2vw;
     font-weight: bold;
     transition: all 0.5s ease-in-out;
 }
 
 header div.box p a:hover {
-    font-size: 1.4em;
+    color: var(--header-hyperlink-hover-color);
+    font-size: 2.2vw;
+}
+
+
+main  {
+    background-color: var(--main-background-color);
 }
 
 main section p {
-    font: normal 2.5em var(--sriracha-font);
+    font: normal 3vw var(--sriracha-font);
     padding: 1em;
 }
 
+main section.ladybird-background {
+    background-image: url("assets/background001.jpg");
+}
+
+main section.ladybird-background, main section.pages-background {
+    color: var(--background-image-text-color);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 2em 1em;
+}
+
+main section.ladybird-background article.container, main section.pages-background article.container {
+    background-color: var(--background-image-background-color);
+    width: max-content;
+}
+
+main section.pages-background {
+    background-image: url("assets/background002.jpg");
+}
+
+footer.footer-page {
+    background-color: var(--footer-background-color);
+    box-shadow: 0px 0px 12px var(--footer-shadow-color);
+    color: var(--footer-text-color);
+    font: bold 1.5vw var(--verdana-font);
+    text-align: center;
+    padding: 1em;
+}
+
+footer.footer-page a {
+    color: var(--footer-hyperlink-text-color);
+    text-decoration: none;
+
+    transition: all 0.5s ease-in-out;
+}
+
+footer.footer-page a:hover {
+    color: var(--footer-hyperlink-hover-text-color);
+    font-size: 1.7vw;
+}
+
+footer.footer-page a:visited {
+    color: var(--footer-hyperlink-visited-text-color);
+}
