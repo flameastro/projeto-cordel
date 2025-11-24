@@ -1,0 +1,62 @@
+/* Variables */
+:root {
+    /* Header Styles */
+    --header-background-color: #030303;
+    --header-color: #fafaff;
+    --header-hyperlink-color: #f3f7ff;
+
+    /* Fonts */
+    --passion-one-font: "Passion One", cursive;
+    --sriracha-font: "Sriracha", cursive;
+}
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+header {
+    background-color: var(--header-background-color);
+    color: var(--header-color);
+    width: 100%;
+    padding: 25px;
+
+    /* Flex settings */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1#header-title {
+    font: 700 6em var(--passion-one-font);
+}
+
+header h1#header-title span.big-text {
+    font-size: 1.4em;
+}
+
+header div.box p {
+    font-weight: bold;
+}
+
+header div.box p a {
+    color: var(--header-hyperlink-color);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+header div.box p a:hover {
+    font-size: 1.4em;
+}
+
+main section p {
+    font: normal 2.5em var(--sriracha-font);
+    padding: 1em;
+}
+
