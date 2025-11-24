@@ -7,9 +7,6 @@
     --header-hyperlink-hover-color: #a2bfff;
     --header-shadow-color: rgba(0, 0, 0, 0.677);
 
-    /* Main */
-    --main-background-color: #f7fbff;
-
     /* Section with Image Styles */
     --background-image-text-color: #f4f2ff;
     --background-image-background-color: #00000083;
@@ -68,7 +65,7 @@ header {
     color: var(--header-color);
     box-shadow: 1px 1px 10px var(--header-shadow-color);
     width: 100%;
-    padding: 25px;
+    padding: 15px;
     margin-bottom: 20px;
 
     /* Flex settings */
@@ -79,35 +76,31 @@ header {
 }
 
 header h1#header-title {
-    font: 700 6vw var(--passion-one-font);
+    font: 700 8vw var(--passion-one-font);
 }
 
 header h1#header-title span.big-text {
-    font-size: 7.8vw;
+    font-size: 10vw;
 }
 
 header div.box p {
     font-weight: bold;
-    font-size: 1.8vw;
+    font-size: 2.5vw;
 }
 
 header div.box p a {
     color: var(--header-hyperlink-color);
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: bold;
     transition: all 0.5s ease-in-out;
 }
 
 header div.box p a:hover {
     color: var(--header-hyperlink-hover-color);
-    font-size: 2.2vw;
+    font-size: 3.3vw;
 }
 
-
-main  {
-    background-color: var(--main-background-color);
-}
 
 main section p {
     font: normal 3vw var(--sriracha-font);
